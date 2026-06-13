@@ -18,7 +18,19 @@ permissions:
 jobs:
   build:
     name: Build Flatpak
-    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        arch:
+          - x86-64
+          - aarch64
+        include:
+          - arch: x86-64
+            runner: ubuntu-latest
+
+          - arch: aarch64
+            runner: ubuntu-24.04-arm
+    runs-on: ${{ matrix.runner }}
 
     steps:
       - name: Checkout repository
@@ -68,13 +80,13 @@ jobs:
       - name: Build Flatpak bundle
         run: |
           mkdir -p release
-          flatpak build-bundle -vv ./repo ./release/com.edde746.plezy.flatpak com.edde746.plezy
+          flatpak build-bundle -vv ./repo ./release/com.edde746.plezy-${{ matrix.arch }}.flatpak com.edde746.plezy
 
       - name: Upload Flatpak bundle as artifact
         uses: actions/upload-artifact@v4
         with:
-          name: com.edde746.plezy.flatpak
-          path: release/com.edde746.plezy.flatpak
+          name: com.edde746.plezy-${{ matrix.arch }}.flatpak
+          path: release/com.edde746.plezy-${{ matrix.arch }}.flatpak
 
   deploy:
     name: Deploy and Sign Flatpak

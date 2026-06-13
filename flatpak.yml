@@ -100,8 +100,14 @@ modules:
       - name: cargo-c
         sources:
           - type: archive
+            only-arches: [x86_64]
             url: https://github.com/lu-zero/cargo-c/releases/download/v0.10.20/cargo-c-x86_64-unknown-linux-musl.tar.gz
             sha256: 4f886fda551b9105efe6e0abae0f9f0d76da2b7faccf8db2b15f3b680841b3e4
+            strip-components: 0
+          - type: archive
+            only-arches: [aarch64]
+            url: https://github.com/lu-zero/cargo-c/releases/download/v0.10.20/cargo-c-aarch64-unknown-linux-musl.tar.gz 
+            sha256: 7779ed479c615631a5a7ae7e51cdc7c20eb067d6758b1134f9375ae860eb5efd
             strip-components: 0
         buildsystem: simple
         build-commands:
@@ -254,7 +260,7 @@ modules:
       - mkdir -p /app/lib/intel-vaapi-driver
       - mkdir -p /app/lib/GL
       - mkdir -p /app/bin
-      - mkdir -p /app/opt && cp -r build/linux/x64/release/bundle /app/opt/plezy
+      - mkdir -p /app/opt && cp -r build/linux/$( [ "$(arch)" = "aarch64" ] && echo "arm64" || echo "x64" )/release/bundle /app/opt/plezy
       - |
         cat > /app/bin/plezy << 'EOF'
         #!/bin/bash
