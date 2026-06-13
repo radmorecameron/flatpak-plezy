@@ -1,5 +1,7 @@
 # flatpak-plezy
 
+NightlyLinks: https://nightly.link/radmorecameron/flatpak-plezy/actions/runs/27479621706
+
 Flatpak packaging repository for [Plezy](https://github.com/edde746/plezy), a Plex client.
 
 Note: Copilot is used in this repository. I (the human) check and verify the code proposed by Copilot thoroughly before merging, but if you oppose Copilot being used at all, this repository might not be for you.
