@@ -273,9 +273,9 @@ modules:
       - install -Dm644 com.edde746.plezy.svg /app/share/icons/hicolor/scalable/apps/com.edde746.plezy.svg
     sources:
       - type: git
-        url: https://github.com/edde746/plezy.git
-        tag: 2.4.1
-        commit: 7c38668a51d74cbd7e39ee31f978bdb3ca8d1f83
+        url: https://github.com/radmorecameron/plezy.git
+        tag: 0.0.1
+        commit: 207497ede968837432bb403d33f3ded42c137694
         x-checker-data:
           type: git
           tag-pattern: ^([\d]+\.[\d]+\.[\d]+)$
