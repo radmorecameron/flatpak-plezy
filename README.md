@@ -1,6 +1,6 @@
 # flatpak-plezy
 
-NightlyLinks: https://nightly.link/radmorecameron/flatpak-plezy/actions/runs/27773635286
+NightlyLinks: https://nightly.link/radmorecameron/flatpak-plezy/actions/runs/27869129365
 
 Flatpak packaging repository for [Plezy](https://github.com/edde746/plezy), a Plex client.
 
