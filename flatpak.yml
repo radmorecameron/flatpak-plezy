@@ -274,8 +274,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/radmorecameron/plezy.git
-        tag: 0.0.2
-        commit: 5c5e063668e37a25937d3d6f16109202569dea5c
+        tag: 0.0.3
+        commit: 1b7a89e1a1cb38ee6859b2dfec3b212a455dae01
         x-checker-data:
           type: git
           tag-pattern: ^([\d]+\.[\d]+\.[\d]+)$
