@@ -268,14 +268,14 @@ modules:
     sources:
       - type: git
         url: https://github.com/edde746/plezy.git
-        tag: 2.14.0
-        commit: 92b0524edb969fc17bf9cb7876b6bda702255484
+        tag: 2.15.0
+        commit: 6d75e58f5228cb9ba4397b7beff77d38509ba716
         x-checker-data:
           type: git
           tag-pattern: ^([\d]+\.[\d]+\.[\d]+)$
       - type: archive
-        url: https://github.com/simdutf/simdutf/releases/download/v9.0.0/singleheader.zip
-        sha256: c47c68cd51025ec66509bc36215b4c4f1f0f0a98129139ee55c541531b652526
+        url: https://github.com/simdutf/simdutf/releases/download/v9.1.0/singleheader.zip
+        sha256: 9de890413ccb528f60aa5a327e6340a4dc29f6cdf3673211320df6f3a971ea44
         dest: linux/simdutf_local
         x-checker-data:
           type: json
