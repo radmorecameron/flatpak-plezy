@@ -4,3 +4,4 @@ release/
 cargo-sources/
 .flatpak-builder/
 com.edde746.plezy.yml
+generated/

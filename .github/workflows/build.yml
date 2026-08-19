@@ -60,6 +60,12 @@ jobs:
       - name: Debug - Show generated manifest
         run: cat com.edde746.plezy.yml
 
+      - name: Debug - Show Tree
+        run: tree
+      
+      - name: Debug - Show generated Flutter SDK module
+        run: cat generated/modules/flutter-sdk-3.47.0.json
+
       - name: Build Flatpak
         run: >
           flatpak-builder --force-clean --sandbox --user
