@@ -83,6 +83,10 @@ jobs:
           mkdir -p release
           flatpak build-bundle -vv ./repo ./release/com.edde746.plezy.flatpak com.edde746.plezy
 
+      - name: Show patch rejection details
+        if: failure()
+        run: ind . -name "*.rej" -exec cat {} \;
+
       - name: Upload Flatpak bundle as artifact
         uses: actions/upload-artifact@v4
         with:
