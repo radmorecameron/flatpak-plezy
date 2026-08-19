@@ -66,6 +66,12 @@ jobs:
       - name: Debug - Show generated Flutter SDK module
         run: cat generated/modules/flutter-sdk-3.47.0.json
 
+      - name: Debug - Show pubspec.json
+        run: cat generated/sources/pubspec.json
+
+      - name: Debug - Show assets.patch
+        run: cat generated/patches/sqlite3/assets.dart.patch
+
       - name: Build Flatpak
         run: >
           flatpak-builder --force-clean --sandbox --user
