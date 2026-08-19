@@ -57,6 +57,9 @@ jobs:
           cd $GITHUB_WORKSPACE
           $VENV_PATH/bin/python3 /tmp/flatpak-flutter/flatpak-flutter.py flatpak.yml
 
+      - name: Debug - Show generated manifest
+        run: cat com.edde746.plezy.yml
+
       - name: Build Flatpak
         run: >
           flatpak-builder --force-clean --sandbox --user
