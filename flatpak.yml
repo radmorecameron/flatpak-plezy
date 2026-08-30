@@ -268,8 +268,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/edde746/plezy.git
-        tag: 2.17.1
-        commit: 805632efc1b99ebacd08843796e55e8399ec0d0a
+        tag: 2.18.0
+        commit: 2806115015c5b2404a0ff578e29bd496afddb8ab
         x-checker-data:
           type: git
           tag-pattern: ^([\d]+\.[\d]+\.[\d]+)$
@@ -298,9 +298,9 @@ modules:
           - patches/plezy-Wno-error.patch
       - type: git
         url: https://github.com/flutter/flutter.git
-        tag: 3.47.1
+        tag: 3.47.2
         dest: flutter
         x-checker-data:
           type: git
           tag-pattern: ^([\d]+\.[\d]+\.[\d]+)$
-        commit: 6655482ec06e547f90abf8ae7590466f4415978d
+        commit: d3b14c876900e553bc736ca19295fc09e3853e8e
