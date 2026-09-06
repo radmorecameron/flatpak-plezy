@@ -80,8 +80,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/vcrhonek/hwdata.git
-            tag: v0.410
-            commit: 8bb6c48dc2e683777e625d1c9ef02c1b25b741cd
+            tag: v0.411
+            commit: 7fc63d411377e40aab66bfbf77dce6a439c3fe87
             x-checker-data:
               type: git
               tag-pattern: ^v([\d.]+)$
@@ -268,8 +268,8 @@ modules:
     sources:
       - type: git
         url: https://github.com/edde746/plezy.git
-        tag: 2.17.1
-        commit: 805632efc1b99ebacd08843796e55e8399ec0d0a
+        tag: 2.19.0
+        commit: 82ae3609f64d11cba14d92170b08c1b1c748a113
         x-checker-data:
           type: git
           tag-pattern: ^([\d]+\.[\d]+\.[\d]+)$
@@ -298,9 +298,9 @@ modules:
           - patches/plezy-Wno-error.patch
       - type: git
         url: https://github.com/flutter/flutter.git
-        tag: 3.47.1
+        tag: 3.47.2
         dest: flutter
         x-checker-data:
           type: git
           tag-pattern: ^([\d]+\.[\d]+\.[\d]+)$
-        commit: 6655482ec06e547f90abf8ae7590466f4415978d
+        commit: d3b14c876900e553bc736ca19295fc09e3853e8e
