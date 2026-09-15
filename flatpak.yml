@@ -80,8 +80,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/vcrhonek/hwdata.git
-            tag: v0.410
-            commit: 8bb6c48dc2e683777e625d1c9ef02c1b25b741cd
+            tag: v0.411
+            commit: 7fc63d411377e40aab66bfbf77dce6a439c3fe87
             x-checker-data:
               type: git
               tag-pattern: ^v([\d.]+)$
@@ -268,14 +268,14 @@ modules:
     sources:
       - type: git
         url: https://github.com/edde746/plezy.git
-        tag: 2.17.1
-        commit: 805632efc1b99ebacd08843796e55e8399ec0d0a
+        tag: 2.20.0
+        commit: b8cff51872464f99b8734e99b2ff297d55ab9993
         x-checker-data:
           type: git
           tag-pattern: ^([\d]+\.[\d]+\.[\d]+)$
       - type: archive
-        url: https://github.com/simdutf/simdutf/releases/download/v9.1.0/singleheader.zip
-        sha256: 9de890413ccb528f60aa5a327e6340a4dc29f6cdf3673211320df6f3a971ea44
+        url: https://github.com/simdutf/simdutf/releases/download/v9.1.2/singleheader.zip
+        sha256: 631d95aaf39371505897b0916be2a60dd7c17ae16cec8bd5036d15d23bd0ac21
         dest: linux/simdutf_local
         x-checker-data:
           type: json
@@ -298,9 +298,9 @@ modules:
           - patches/plezy-Wno-error.patch
       - type: git
         url: https://github.com/flutter/flutter.git
-        tag: 3.47.1
+        tag: 3.47.4
         dest: flutter
         x-checker-data:
           type: git
           tag-pattern: ^([\d]+\.[\d]+\.[\d]+)$
-        commit: 6655482ec06e547f90abf8ae7590466f4415978d
+        commit: 9584c6713b324636289d067944a46fd6b49df14b
