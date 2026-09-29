@@ -80,8 +80,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/vcrhonek/hwdata.git
-            tag: v0.410
-            commit: 8bb6c48dc2e683777e625d1c9ef02c1b25b741cd
+            tag: v0.411
+            commit: 7fc63d411377e40aab66bfbf77dce6a439c3fe87
             x-checker-data:
               type: git
               tag-pattern: ^v([\d.]+)$
@@ -157,8 +157,8 @@ modules:
         sources:
           - type: git
             url: https://git.ffmpeg.org/ffmpeg.git
-            tag: n9.0.1
-            commit: bf1b838f2ab88b4f8fd83443325c782ea0e0f7fa
+            tag: n9.0.2
+            commit: 946fcce07b6dcd0331c8cc609192aeff5e1924f8
             x-checker-data:
               type: git
               tag-pattern: ^n([\d.]+)$
@@ -169,8 +169,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/fribidi/fribidi.git
-            tag: v1.0.16
-            commit: 68162babff4f39c4e2dc164a5e825af93bda9983
+            tag: v1.0.17
+            commit: b93119f5fdc7ea47672cc304c1455ffa6dfe7536
             x-checker-data:
               type: git
               tag-pattern: ^v([\d.]+)$
@@ -268,14 +268,14 @@ modules:
     sources:
       - type: git
         url: https://github.com/edde746/plezy.git
-        tag: 2.17.1
-        commit: 805632efc1b99ebacd08843796e55e8399ec0d0a
+        tag: 2.22.0
+        commit: 1c2381f0da4a75d0e16b2dd8745551bb816de9fb
         x-checker-data:
           type: git
           tag-pattern: ^([\d]+\.[\d]+\.[\d]+)$
       - type: archive
-        url: https://github.com/simdutf/simdutf/releases/download/v9.1.0/singleheader.zip
-        sha256: 9de890413ccb528f60aa5a327e6340a4dc29f6cdf3673211320df6f3a971ea44
+        url: https://github.com/simdutf/simdutf/releases/download/v9.2.1/singleheader.zip
+        sha256: a1b1fc3a3a8358820438f663237e9f252ce5ad356ae283ac066dcc9212eaa4dc
         dest: linux/simdutf_local
         x-checker-data:
           type: json
@@ -298,9 +298,9 @@ modules:
           - patches/plezy-Wno-error.patch
       - type: git
         url: https://github.com/flutter/flutter.git
-        tag: 3.47.1
+        tag: 3.47.5
         dest: flutter
         x-checker-data:
           type: git
           tag-pattern: ^([\d]+\.[\d]+\.[\d]+)$
-        commit: 6655482ec06e547f90abf8ae7590466f4415978d
+        commit: 6a19cca56475dbfba1478ee68d7bd0c2ef891da1
