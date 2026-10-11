@@ -80,8 +80,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/vcrhonek/hwdata.git
-            tag: v0.410
-            commit: 8bb6c48dc2e683777e625d1c9ef02c1b25b741cd
+            tag: v0.412
+            commit: 816a9490ffcdad1929e0e53f79c500e1aeadd492
             x-checker-data:
               type: git
               tag-pattern: ^v([\d.]+)$
@@ -157,8 +157,8 @@ modules:
         sources:
           - type: git
             url: https://git.ffmpeg.org/ffmpeg.git
-            tag: n9.0.1
-            commit: bf1b838f2ab88b4f8fd83443325c782ea0e0f7fa
+            tag: n9.0.2
+            commit: 946fcce07b6dcd0331c8cc609192aeff5e1924f8
             x-checker-data:
               type: git
               tag-pattern: ^n([\d.]+)$
@@ -169,8 +169,8 @@ modules:
         sources:
           - type: git
             url: https://github.com/fribidi/fribidi.git
-            tag: v1.0.16
-            commit: 68162babff4f39c4e2dc164a5e825af93bda9983
+            tag: v1.0.17
+            commit: b93119f5fdc7ea47672cc304c1455ffa6dfe7536
             x-checker-data:
               type: git
               tag-pattern: ^v([\d.]+)$
@@ -227,8 +227,8 @@ modules:
     sources:
       - type: git
         url: https://gitlab.freedesktop.org/libevdev/libevdev.git
-        tag: libevdev-1.13.7
-        commit: a158f468affb059669189454a52b0d78c563618b
+        tag: libevdev-1.14.0
+        commit: d9af2e4580297e9c14715fef06621dd39d9d8a3a
         x-checker-data:
           type: git
           tag-pattern: ^libevdev-([\d.]+)$
@@ -268,14 +268,14 @@ modules:
     sources:
       - type: git
         url: https://github.com/edde746/plezy.git
-        tag: 2.17.1
-        commit: 805632efc1b99ebacd08843796e55e8399ec0d0a
+        tag: 2.23.0
+        commit: 6145504b69cb9e7f52a364631a20c7b53c46e7b3
         x-checker-data:
           type: git
           tag-pattern: ^([\d]+\.[\d]+\.[\d]+)$
       - type: archive
-        url: https://github.com/simdutf/simdutf/releases/download/v9.1.0/singleheader.zip
-        sha256: 9de890413ccb528f60aa5a327e6340a4dc29f6cdf3673211320df6f3a971ea44
+        url: https://github.com/simdutf/simdutf/releases/download/v9.2.1/singleheader.zip
+        sha256: a1b1fc3a3a8358820438f663237e9f252ce5ad356ae283ac066dcc9212eaa4dc
         dest: linux/simdutf_local
         x-checker-data:
           type: json
@@ -283,8 +283,8 @@ modules:
           version-query: .tag_name | sub("^v"; "")
           url-query: .assets[] | select(.name=="singleheader.zip") | .browser_download_url
       - type: archive
-        url: https://sqlite.org/2026/sqlite-autoconf-3530400.tar.gz
-        sha256: 0e9483900e92cd5de8fd48d16bf9200145a61f7fd5be542a5ac81d8a9516eb9c
+        url: https://sqlite.org/2026/sqlite-autoconf-3540000.tar.gz
+        sha256: 134ec0802dda5795816e25d25872d20b312cb3973438c49b30bc40b7705ea9ed
         dest: linux/sqlite3_local
         x-checker-data:
           type: html
@@ -298,9 +298,9 @@ modules:
           - patches/plezy-Wno-error.patch
       - type: git
         url: https://github.com/flutter/flutter.git
-        tag: 3.47.1
+        tag: 3.47.7
         dest: flutter
         x-checker-data:
           type: git
           tag-pattern: ^([\d]+\.[\d]+\.[\d]+)$
-        commit: 6655482ec06e547f90abf8ae7590466f4415978d
+        commit: abaf9c523780a608bd46686fd5e53740a07077f8
