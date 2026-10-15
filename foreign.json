@@ -1,20 +1,3 @@
 {
-    "sentry_flutter": {
-        "manifest": {
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/getsentry/sentry-native.git",
-                    "tag": "0.13.3",
-                    "dest": "sentry-native-src"
-                },
-                {
-                    "type": "shell",
-                    "commands": [
-                        "SENTRY_CMAKE=$(find .pub-cache/git/sentry-dart-*/packages/flutter/linux/CMakeLists.txt 2>/dev/null | head -1) && sed -i '1s|^|set(FETCHCONTENT_FULLY_DISCONNECTED ON)\\nset(FETCHCONTENT_SOURCE_DIR_SENTRY-NATIVE \"/run/build/plezy/sentry-native-src\")\\n|' \"$SENTRY_CMAKE\""
-                    ]
-                }
-            ]
-        }
-    }
+
 }

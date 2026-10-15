@@ -56,8 +56,21 @@ jobs:
           VENV_PATH=$(poetry env info --path)
           cd $GITHUB_WORKSPACE
           $VENV_PATH/bin/python3 /tmp/flatpak-flutter/flatpak-flutter.py flatpak.yml
-          cp ./patches/sqlite3_flutter_libs-0.5.42-CMakeLists.txt.patch ./generated/patches/sqlite3_flutter_libs/0.5.42-CMakeLists.txt.patch
-          sed -i 's|generated/patches/sqlite3_flutter_libs/0.5.41-CMakeLists.txt.patch|generated/patches/sqlite3_flutter_libs/0.5.42-CMakeLists.txt.patch|g' ./generated/sources/pubspec.json
+
+      - name: Debug - Show generated manifest
+        run: cat com.edde746.plezy.yml
+
+      - name: Debug - Show Tree
+        run: tree
+      
+      - name: Debug - Show generated Flutter SDK module
+        run: cat generated/modules/flutter-sdk-3.47.0.json
+
+      - name: Debug - Show pubspec.json
+        run: cat generated/sources/pubspec.json
+
+      - name: Debug - Show assets.patch
+        run: cat generated/patches/sqlite3/assets.dart.patch
 
       - name: Build Flatpak
         run: >
@@ -69,6 +82,10 @@ jobs:
         run: |
           mkdir -p release
           flatpak build-bundle -vv ./repo ./release/com.edde746.plezy.flatpak com.edde746.plezy
+
+      - name: Show patch rejection details
+        if: failure()
+        run: find . -name "*.rej" -exec cat {} \;
 
       - name: Upload Flatpak bundle as artifact
         uses: actions/upload-artifact@v4

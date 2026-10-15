@@ -1,8 +1,8 @@
 diff --git a/linux/CMakeLists.txt b/linux/CMakeLists.txt
-index 1290664..e8cc3ea 100644
+index 3644a4af..11504053 100644
 --- a/linux/CMakeLists.txt
 +++ b/linux/CMakeLists.txt
-@@ -41,7 +41,7 @@ endif()
+@@ -54,7 +54,7 @@ endif()
  # of modifying this function.
  function(APPLY_STANDARD_SETTINGS TARGET)
    target_compile_features(${TARGET} PUBLIC cxx_std_14)
